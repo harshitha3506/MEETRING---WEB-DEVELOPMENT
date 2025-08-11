@@ -1,0 +1,151 @@
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(120deg, #e9efff 0%, #f7fafd 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 480px;
+    margin: 64px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+    padding: 40px 36px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #22304a;
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 1.2px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: #2d3a4b;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    background: #f8fafc;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #c7d7fa;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+    letter-spacing: 0.5px;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.13);
+}
+
+.success-message {
+    margin-top: 22px;
+    color: #16a34a;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.08rem;
+    background: #e7fbe9;
+    border-radius: 6px;
+    padding: 10px 0;
+    box-shadow: 0 1px 4px rgba(22, 163, 74, 0.07);
+}
+
+.reminder-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.reminder-input input[type="number"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.add-reminder {
+    margin-top: 6px;
+    background: #e0e7ff;
+    color: #1e40af;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-reminder:hover {
+    background: #c7d7fa;
+}
+
+.remove-reminder {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.remove-reminder:hover {
+    background: #fecaca;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 18px 6vw 18px 6vw;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+}

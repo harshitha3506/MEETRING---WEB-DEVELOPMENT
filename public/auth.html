@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Meeting Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .auth-container {
+            max-width: 400px;
+            margin: 70px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 24px rgba(44, 62, 80, 0.10);
+            padding: 36px 30px 28px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .auth-tabs {
+            display: flex;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        .auth-tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2563eb;
+            border-bottom: 2.5px solid transparent;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        .auth-tab.active {
+            color: #1e40af;
+            border-bottom: 2.5px solid #2563eb;
+        }
+
+        .auth-form {
+            width: 100%;
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .auth-form input {
+            margin-bottom: 16px;
+        }
+
+        .auth-form button {
+            margin-top: 8px;
+        }
+
+        .auth-message {
+            margin-top: 12px;
+            color: #b91c1c;
+            text-align: center;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="auth-container">
+        <h2 style="margin-bottom: 18px; color:#22304a; font-weight:700;">Meeting Reminder</h2>
+        <div class="auth-tabs">
+            <div class="auth-tab active" id="loginTab">Login</div>
+            <div class="auth-tab" id="signupTab">Sign Up</div>
+        </div>
+        <form id="loginForm" class="auth-form active">
+            <input type="email" id="loginEmail" placeholder="Email" required autocomplete="username">
+            <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password">
+            <button type="submit">Login</button>
+        </form>
+        <form id="signupForm" class="auth-form">
+            <input type="email" id="signupEmail" placeholder="Email" required autocomplete="username">
+            <input type="password" id="signupPassword" placeholder="Password" required autocomplete="new-password">
+            <input type="password" id="signupConfirm" placeholder="Confirm Password" required
+                autocomplete="new-password">
+            <button type="submit">Sign Up</button>
+        </form>
+        <div id="authMessage" class="auth-message"></div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+
+</html>

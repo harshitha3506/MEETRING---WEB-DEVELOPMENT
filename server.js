@@ -20,7 +20,7 @@ const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'shareloophp@gmail.com',
-        pass: 'jxzmqqbneekxxikr'
+        pass: process.env.GMAIL_PASS
     }
 });
 // Helper to schedule email reminders

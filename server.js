@@ -15,15 +15,14 @@ app.use(session({
     cookie: { maxAge: 24 * 60 * 60 * 1000 } // 1 day
 }));
 
-// Configure nodemailer transporter (fill in your Gmail and app password)
+// Configure nodemailer transporter (use your Gmail and app password)
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'shareloophp@gmail.com', // <-- put your Gmail address here
-        pass: 'SHARELOOP444' // <-- put your Gmail app password here
+        user: 'shareloophp@gmail.com',
+        pass: 'jxzmqqbneekxxikr'
     }
 });
-
 // Helper to schedule email reminders
 function scheduleEmailReminders(meeting, userEmail) {
     if (!Array.isArray(meeting.reminders)) return;
